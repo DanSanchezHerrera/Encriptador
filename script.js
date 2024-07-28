@@ -12,15 +12,10 @@ document.getElementById('copiar').addEventListener('click', function() {
 
 function procesarTexto(accion) {
     const inputText = document.getElementById('input-text').value;
-    const soloMinusculas = document.getElementById('solo-letras-minusculas').checked;
-    let textoProcesado = inputText;
-
-    if (soloMinusculas) {
-        textoProcesado = textoProcesado.toLowerCase().replace(/[áéíóúüñ]/g, function(match) {
-            const acentos = { 'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u', 'ü': 'u', 'ñ': 'n' };
-            return acentos[match];
-        });
-    }
+    let textoProcesado = inputText.toLowerCase().replace(/[áéíóúüñ]/g, function(match) {
+        const acentos = { 'á': 'a', 'é': 'e', 'í': 'i', 'ó': 'o', 'ú': 'u', 'ü': 'u', 'ñ': 'n' };
+        return acentos[match];
+    });
 
     if (accion === 'encriptar') {
         textoProcesado = encriptar(textoProcesado);
