@@ -10,6 +10,9 @@ document.getElementById('copiar').addEventListener('click', function() {
     copiarTexto();
 });
 
+// Ocultar el botón de copiar al cargar la página
+document.getElementById('copiar').style.display = 'none';
+
 function procesarTexto(accion) {
     const inputText = document.getElementById('input-text').value;
     let textoProcesado = inputText.toLowerCase().replace(/[áéíóúüñ]/g, function(match) {
@@ -22,7 +25,6 @@ function procesarTexto(accion) {
     } else if (accion === 'desencriptar') {
         textoProcesado = desencriptar(textoProcesado);
     }
-
     mostrarResultado(textoProcesado);
 }
 
@@ -63,7 +65,7 @@ function mostrarResultado(texto) {
     mensajeSubtitulo.style.display = 'none';
     mensajeResultado.classList.remove('mensaje-resultado');
     mensajeResultado.classList.add('mensaje-subtitulo');
-    copiarBtn.style.display = 'block';
+    copiarBtn.style.display = 'block'; // Mostrar el botón de copiar después de encriptar o desencriptar
 }
 
 function copiarTexto() {
