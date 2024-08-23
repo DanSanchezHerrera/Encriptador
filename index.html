@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="Assets/espia.png" alt="icono">
+        <p>Encriptador De Texto</p>
+    </header>
+    <main>
+        <div class="encriptador">
+            <textarea id="input-texto" class="texto">Ingrese el texto aquí</textarea>
+            <div class="exclamacion">
+                <img src="Assets/exclamacion.png" alt="signo de exclamacion">
+                Solo letras minúsculas y sin acentos
+            </div>
+            <div class="botones">
+                <button class="btn encriptar" id="encriptar">Encriptar</button>
+                <button class="btn desencriptar" id="desencriptar">Desencriptar</button>
+            </div>
+        </div>
+        <div class="navegacion">
+            <img src="Assets/espiar.png" alt="imagen de espía">
+            <div class="ingresar">
+                <p id="aviso" class="aviso">Ningún mensaje fue encontrado</p>
+                <p id="resultado" class="resultado">Ingresa el texto que desees encriptar o desencriptar</p>
+                <button id="copiar" class="btn desencriptar">Copiar</button>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        © Hola 2024. Icono <a href="https://www.flaticon.es/iconos-gratis/hacker" title="hacker iconos">por Smashicons - Flaticon</a>, imagen <a href="https://www.flaticon.es/stickers-gratis/espiar" title="espiar stickers">por Stickers - Flaticon</a>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
