@@ -1,9 +1,5 @@
 //ocultar botón cancelar al cargar
 document.getElementById('copiar').style.display = 'none';
-//ocultar texto
-function display(){
-    document.getElementById("aviso").style.display = "none";
-};
 
 //botones
 document.getElementById('encriptar').addEventListener('click', function() {
